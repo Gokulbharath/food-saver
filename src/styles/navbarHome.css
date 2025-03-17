@@ -1,0 +1,81 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 0 20px;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Ensure padding does not affect overall size */
+}
+
+/* Navbar Left Section: Logo and Text */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo-image {
+  width: 60px;
+  height: 60px;
+}
+
+.navbar-logo-text {
+  font-size: 1.5rem;
+  color: #ff5722;
+  font-weight: bold;
+}
+
+/* Navbar Right Section: Login Button */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto; /* Push login button to the right */
+}
+
+.navbar-login-button {
+  background-color: #ff5722;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap; /* Prevent text from wrapping */
+  max-width: 150px; /* Set a maximum width for the button */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Remove unnecessary spacing at the end of the button */
+.navbar-login-button:focus {
+  outline: none; /* Remove outline when focused */
+}
+
+.navbar-login-button:hover {
+  background-color: #ff5722;
+}
+
+@media (max-width: 768px) {
+  /* Mobile Responsiveness */
+  .navbar {
+    padding: 0 10px;
+  }
+
+  .navbar-login-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
